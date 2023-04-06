@@ -1,0 +1,21 @@
+.session {
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.session-name {
+}
+
+.session-day {
+  font-size: 14px;
+  color: var(--f-light-gray);
+}
+
+.session-time {
+  background-color: var(--f-gray);
+  padding: 6px 10px;
+  border-radius: 9999px;
+}
