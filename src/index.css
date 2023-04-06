@@ -1,0 +1,24 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap");
+
+:root {
+  --f-red: #e10600;
+  --f-dark-blue: #15151e;
+  --f-gray: #38383f;
+  --f-light-gray: #7d7d81;
+  --f-white: #ffffff;
+}
+
+body {
+  font-family: "Titillium Web", Arial, Helvetica, sans-serif;
+  color: var(--f-white);
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--f-dark-blue);
+  width: 480px;
+  height: 360px;
+}
