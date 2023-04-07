@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "F1 Upcoming Race",
+  "description": "F1 Upcoming Race extension displays the timings for F1 race weekends and allows users to customize their experience based on their time zone. It is a tool for F1 fans to stay informed about the race weekend schedule. This extension is unofficial and is not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html"
+  }
+}
