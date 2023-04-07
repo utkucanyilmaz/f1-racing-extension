@@ -24,20 +24,22 @@ function Race() {
       </div>
       <div className="race-info-countdown">
         <span className="number">
-          30 <span className="type">Days</span>{" "}
+          30 <span className="type">Days</span>
         </span>
         <span className="number">
-          30 <span className="type">Hours</span>{" "}
+          30 <span className="type">Hours</span>
         </span>
         <span className="number">
-          30 <span className="type">Mins</span>{" "}
+          30 <span className="type">Mins</span>
         </span>
         <span className="number">
-          30 <span className="type">Seconds</span>{" "}
+          30 <span className="type">Seconds</span>
         </span>
       </div>
       <SessionsTable />
-      <div className="times-displayed">Times displayed are your times.</div>
+      <div className="times-displayed">
+        Times displayed are your local times.
+      </div>
     </div>
   );
 }

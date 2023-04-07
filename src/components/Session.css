@@ -6,7 +6,7 @@
 }
 
 .session:nth-child(3) {
-  padding-bottom: 6px;
+  padding-bottom: 4px;
   border-bottom: 2px solid var(--f-gray);
 }
 
