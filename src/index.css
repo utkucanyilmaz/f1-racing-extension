@@ -12,13 +12,16 @@
 body {
   font-family: "Titillium Web", Arial, Helvetica, sans-serif;
   color: var(--f-white);
+  background-color: var(--f-dark-blue);
+  margin: 0.5rem 0 0 0;
+  font-size: 14px;
 }
 
 .App {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  background-color: var(--f-dark-blue);
+  flex-direction: column;
+  row-gap: 1rem;
   width: 480px;
-  height: 360px;
 }
