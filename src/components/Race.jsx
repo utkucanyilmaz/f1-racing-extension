@@ -25,9 +25,14 @@ function Race() {
         race => new Date(race.date).getTime() > now
       );
 
-      const flagResponse = await fetch(
-        `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags`
-      );
+      const flagResponse =
+        raceInfo.Circuit.Location.country === "Netherlands"
+          ? await fetch(
+              `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags&fullText=true`
+            )
+          : await fetch(
+              `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags`
+            );
 
       const [{ flags }] = await flagResponse.json();
 
@@ -83,7 +88,7 @@ function Race() {
             date={upcomingRace.raceInfo.date}
             time={upcomingRace.raceInfo.time}
           />
-          <SessionsTable />
+          <SessionsTable raceInfo={upcomingRace.raceInfo} />
           <div className="times-displayed">
             Times displayed are your local times.
           </div>
