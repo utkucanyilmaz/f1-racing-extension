@@ -33,37 +33,10 @@
   text-transform: uppercase;
 }
 
-.race-info-countdown {
-  padding-block: 1rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 1rem;
-  width: 100%;
-}
-
-.race-info-countdown .number {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 32px;
-  padding: 0.7rem;
-  background-color: var(--f-gray);
-  border-radius: 10px;
-}
-
-.race-info-countdown .type {
-  margin-top: 4px;
-  font-size: 10px;
-}
-
 .race-info-date {
   display: flex;
   column-gap: 4px;
+  text-transform: uppercase;
 }
 
 .race-country-image {
@@ -95,5 +68,5 @@
 
 .times-displayed {
   align-self: center;
-  font-size: 12px;
+  font-size: 10px;
 }
