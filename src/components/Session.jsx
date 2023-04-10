@@ -2,12 +2,12 @@ import React from "react";
 
 import "./Session.css";
 
-function Session() {
+function Session({ session, date, time, order }) {
   return (
-    <div className="session">
-      <div className="session-name">PRACTICE 1</div>
-      <div className="session-day">FRI</div>
-      <div className="session-time">13:30</div>
+    <div className={`session ${order}`}>
+      <div className="session-name">{session}</div>
+      <div className="session-date">{date}</div>
+      <div className="session-time">{time}</div>
     </div>
   );
 }

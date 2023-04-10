@@ -18,10 +18,5 @@ body {
 }
 
 .App {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 1rem;
-  width: 400px;
+  width: 380px;
 }
