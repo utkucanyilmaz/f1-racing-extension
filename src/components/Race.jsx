@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import SessionsTable from "./SessionsTable";
+
 import Countdown from "./Countdown";
+import RaceInfo from "./RaceInfo";
+import SessionsTable from "./SessionsTable";
+
 import "./Race.css";
 
 function Race() {
@@ -65,25 +68,7 @@ function Race() {
           <div className="race-round">
             Round {upcomingRace.raceInfo.round} - Upcoming Race
           </div>
-          <div className="race-info">
-            <div className="race-country-image">
-              <img
-                src={flag.svg}
-                alt={`${upcomingRace.raceInfo.Circuit.Location.country} flag`}
-              />
-            </div>
-            <div>
-              <div className="race-info-year">
-                {upcomingRace.raceInfo.season}
-              </div>
-              <div className="race-info-title">
-                {upcomingRace.raceInfo.raceName}
-              </div>
-              <div className="race-info-date">
-                {`${upcomingRace.firstRaceDay} - ${upcomingRace.lastRaceDay}`}
-              </div>
-            </div>
-          </div>
+          <RaceInfo upcomingRace={upcomingRace} flag={flag} />
           <Countdown
             date={upcomingRace.raceInfo.date}
             time={upcomingRace.raceInfo.time}

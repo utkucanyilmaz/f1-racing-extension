@@ -14,31 +14,6 @@
   /* border-bottom-right-radius: 1.5rem; */
 }
 
-.race-info {
-  display: flex;
-  column-gap: 6px;
-}
-
-.race-info-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.race-info-title {
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
-  line-height: 1.3;
-  text-transform: uppercase;
-}
-
-.race-info-date {
-  display: flex;
-  column-gap: 4px;
-  text-transform: uppercase;
-}
-
 .race-country-image {
   display: flex;
   align-items: center;
