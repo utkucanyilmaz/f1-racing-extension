@@ -20,8 +20,12 @@
 }
 
 .session-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--f-gray);
   padding: 6px 10px;
   border-radius: 10px;
   place-self: end;
+  min-width: 100%;
 }
