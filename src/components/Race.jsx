@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Countdown from "./Countdown";
 import RaceInfo from "./RaceInfo";
 import SessionsTable from "./SessionsTable";
+import LoadingPlaceholder from "./LoadingPlaceholder";
 
 import "./Race.css";
 
@@ -79,6 +80,7 @@ function Race() {
           </div>
         </>
       )}
+      {isLoading && <LoadingPlaceholder />}
     </div>
   );
 }

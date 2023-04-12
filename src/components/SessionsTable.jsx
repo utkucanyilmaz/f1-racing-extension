@@ -6,6 +6,7 @@ import Session from "./Session";
 function SessionsTable({ raceInfo }) {
   function formatSessionDateTime(sessionDate, sessionTime) {
     const dateAndTime = new Date(`${sessionDate}T${sessionTime}`);
+
     const date = dateAndTime.toLocaleString("en-GB", {
       day: "numeric",
       month: "short",
