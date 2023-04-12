@@ -4,7 +4,7 @@ The F1 Upcoming Race Extension is a Chrome extension designed to provide F1 foll
 
 ## Screenshot
 
-![Screenshot of F1 Upcoming Race Extension]((./screenshot.png "F1 Upcoming Race Extension"))
+![Screenshot of F1 Upcoming Race Extension](./screenshot.png "F1 Upcoming Race Extension"))
 
 ## Usage
 
