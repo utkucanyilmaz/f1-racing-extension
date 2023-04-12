@@ -2,6 +2,10 @@
 
 The F1 Upcoming Race Extension is a Chrome extension designed to provide F1 followers with up-to-date race weekend dates and times. It allows users to view the schedule in their local time zone. Whether you're a casual fan or a F1 enthusiast, the F1 Upcoming Race Extension is a useful tool to stay informed about the F1 weekend schedule.
 
+## Screenshot
+
+![Screenshot of extension]((./screenshot.png "F1 Upcoming Race Extension"))
+
 ## Usage
 
 After the extension is installed, an icon will appear in the top right corner of your Chrome browser. Clicking it will give you access to the upcoming race weekend schedule.
