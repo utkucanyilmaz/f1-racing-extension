@@ -19,6 +19,7 @@
   padding: 0.7rem;
   background-color: var(--f-gray);
   border-radius: 10px;
+  border: 1px solid var(--f-red);
 }
 
 .countdown .unit {

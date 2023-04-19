@@ -67,16 +67,18 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  width: 100%;
 }
 
 .sessions-table-placeholder .row {
   display: flex;
   justify-content: space-between;
   gap: 14px;
+  width: 100%;
 }
 
 .sessions-table-placeholder .col {
-  width: 110px;
+  width: 100%;
   height: 24px;
 }
 
