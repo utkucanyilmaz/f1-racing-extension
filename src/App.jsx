@@ -1,5 +1,5 @@
 import React from "react";
-import Race from "./components/Race";
+import Race from "./components/race-components/Race";
 
 function App() {
   return (
