@@ -5,62 +5,41 @@ import RaceInfo from "./RaceInfo";
 import SessionsTable from "./SessionsTable";
 import LoadingPlaceholder from "./LoadingPlaceholder";
 
+import { formatDate, findNextRace } from "../../helpers";
+
 import "./Race.css";
 
-function Race() {
+function Race({ races }) {
   const [upcomingRace, setUpcomingRace] = useState(null);
   const [flag, setFlag] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   async function getUpcomingRaceData() {
-    const now = new Date().getTime();
+    const raceInfo = findNextRace(races);
 
-    try {
-      const raceDataResponse = await fetch(
-        "https://ergast.com/api/f1/current.json"
-      );
-      const {
-        MRData: {
-          RaceTable: { Races },
-        },
-      } = await raceDataResponse.json();
+    const firstRaceDay = formatDate(raceInfo.FirstPractice.date);
 
-      const raceInfo = await Races.find(
-        race => new Date(race.date).getTime() > now
-      );
+    const lastRaceDay = formatDate(raceInfo.date);
 
-      const flagResponse =
-        raceInfo.Circuit.Location.country === "Netherlands"
-          ? await fetch(
-              `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags&fullText=true`
-            )
-          : await fetch(
-              `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags`
-            );
+    const flagResponse =
+      raceInfo.Circuit.Location.country === "Netherlands"
+        ? await fetch(
+            `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags&fullText=true`
+          )
+        : await fetch(
+            `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags`
+          );
 
-      const [{ flags }] = await flagResponse.json();
+    const [{ flags }] = await flagResponse.json();
 
-      const firstRaceDay = new Date(raceInfo.FirstPractice.date).toLocaleString(
-        "en-GB",
-        { day: "numeric", month: "short" }
-      );
-
-      const lastRaceDay = new Date(raceInfo.date).toLocaleString("en-GB", {
-        day: "numeric",
-        month: "short",
-      });
-
-      setUpcomingRace({ raceInfo, firstRaceDay, lastRaceDay });
-      setFlag(flags);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
+    setUpcomingRace({ raceInfo, firstRaceDay, lastRaceDay });
+    setFlag(flags);
+    setIsLoading(false);
   }
 
   useEffect(() => {
-    getUpcomingRaceData();
-  }, []);
+    races && getUpcomingRaceData();
+  }, [races]);
 
   return (
     <div className="race">
