@@ -6,9 +6,21 @@
   --f-dark-blue: #15151e;
   --f-gray: #38383f;
   --f-light-gray: #7d7d81;
+  --f-lighter-gray: #ededed;
   --f-white: #ffffff;
   --f-offwhite: #faf9f6;
   --f-dark-red: #6a0300;
+
+  --f-mercedes: #00d2be;
+  --f-redbull: #0600ef;
+  --f-mclaren: #ff8700;
+  --f-ferrari: #dc0000;
+  --f-alpine: #0090ff;
+  --f-aston-martin: #006f62;
+  --f-alfa-romeo: #900000;
+  --f-alphatauri: #0a1c2e;
+  --f-williams: #37bedd;
+  --f-haas: #b6babd;
 }
 
 body {
