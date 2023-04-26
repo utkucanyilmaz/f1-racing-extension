@@ -1,0 +1,132 @@
+.standings-table {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.standings-table > a {
+  text-decoration: none;
+}
+
+.standings-table-title {
+  background-color: var(--f-red);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.standings-table-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--f-white);
+  color: var(--f-dark-blue);
+  border-radius: 6px;
+  padding: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.driver-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.driver-pos {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* .driver-fullname {
+  font-size: 14px;
+} */
+
+.driver-surname {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.constructor-name {
+  font-size: 12px;
+}
+
+.ranking-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.driver-points {
+  padding-block: 0.3rem;
+  padding-inline: 0.6rem;
+  border-radius: 999px;
+  background-color: var(--f-lighter-gray);
+}
+
+.standings-table-item:hover .driver-points {
+  background-color: var(--f-gray);
+  color: var(--f-white);
+}
+
+.driver-wins {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.wins-trophy-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.red_bull:hover {
+  background-color: var(--f-redbull);
+  color: var(--f-white);
+}
+
+.aston_martin:hover {
+  background-color: var(--f-aston-martin);
+  color: var(--f-white);
+}
+
+.ferrari:hover {
+  background-color: var(--f-ferrari);
+  color: var(--f-white);
+}
+
+.mercedes:hover {
+  background-color: var(--f-mercedes);
+  color: var(--f-white);
+}
+
+.mclaren:hover {
+  background-color: var(--f-mclaren);
+  color: var(--f-white);
+}
+
+.haas:hover {
+  background-color: var(--f-haas);
+  color: var(--f-white);
+}
+
+.alpine:hover {
+  background-color: var(--f-alpine);
+  color: var(--f-white);
+}
+
+.alfa:hover {
+  background-color: var(--f-alfa-romeo);
+  color: var(--f-white);
+}
+
+.alphatauri:hover {
+  background-color: var(--f-alphatauri);
+  color: var(--f-white);
+}
+
+.williams:hover {
+  background-color: var(--f-williams);
+  color: var(--f-white);
+}
