@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import CalendarItem from "./CalendarItem";
 import "./Calendar.css";
 
