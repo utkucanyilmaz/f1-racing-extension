@@ -4,7 +4,6 @@ import "./StandingsTable.css";
 import trophyIcon from "/icons/trophy-solid.svg";
 
 function StandingsTable({ driverStandings }) {
-  console.log(driverStandings);
   return (
     <div className="standings-table">
       <div className="standings-table-title">Driver Standings</div>
