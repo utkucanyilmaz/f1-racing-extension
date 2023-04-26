@@ -6,12 +6,11 @@ import trophyIcon from "/icons/trophy-solid.svg";
 function StandingsTable({ driverStandings }) {
   return (
     <div className="standings-table">
-      <div className="standings-table-title">Driver Standings</div>
+      <div className="standings-table-title title-bg">Driver Standings</div>
       {driverStandings &&
         driverStandings.map(driver => (
-          <a
+          <div
             key={driver.position}
-            href={driver.Driver.url}
             className={`${driver.Constructors[0].constructorId} standings-table-item`}
           >
             <div className="driver-info">
@@ -37,7 +36,7 @@ function StandingsTable({ driverStandings }) {
                 <span className="wins">{driver.wins}</span>
               </div>
             </div>
-          </a>
+          </div>
         ))}
     </div>
   );

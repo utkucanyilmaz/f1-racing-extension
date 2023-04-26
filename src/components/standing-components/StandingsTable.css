@@ -7,16 +7,11 @@
   cursor: default;
 }
 
-.standings-table > a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
 .standings-table-title {
-  background-color: var(--f-red);
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  padding: 1rem;
+  font-weight: 700;
+  padding-block: 21px;
+  padding-inline: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .standings-table-item {
