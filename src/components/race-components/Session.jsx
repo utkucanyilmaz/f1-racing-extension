@@ -8,8 +8,14 @@ function Session({ session, dateAndTime, order }) {
       <div className="session-name">{session}</div>
       <div className="session-date">{dateAndTime.date}</div>
       <div className="session-time">
-        {dateAndTime.time}
-        {session !== "Race" && ` - ${dateAndTime.estimatedEndTime}`}
+        {session === "Sprint Shootout"
+          ? dateAndTime.sprintShootoutTime
+          : dateAndTime.time}
+        {session === "Sprint Shootout"
+          ? ` - ${dateAndTime.sprintShootoutEndTime}`
+          : session !== "Race"
+          ? ` - ${dateAndTime.endTime}`
+          : ""}
       </div>
     </div>
   );

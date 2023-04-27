@@ -1,33 +1,10 @@
 import React from "react";
 import "./SessionsTable.css";
+import { formatSessionDateTime } from "../../helpers";
 
 import Session from "./Session";
 
 function SessionsTable({ raceInfo }) {
-  function formatSessionDateTime(sessionDate, sessionTime) {
-    const dateAndTime = new Date(`${sessionDate}T${sessionTime}`);
-
-    const date = dateAndTime.toLocaleString("en-GB", {
-      day: "numeric",
-      month: "short",
-      weekday: "short",
-    });
-
-    const time = dateAndTime.toLocaleString("en-GB", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-
-    const estimatedEndTime = new Date(
-      dateAndTime.getTime() + 1000 * 60 * 60
-    ).toLocaleString("en-GB", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-
-    return { date, time, estimatedEndTime };
-  }
-
   return (
     <div className="session-times">
       <Session
@@ -49,10 +26,11 @@ function SessionsTable({ raceInfo }) {
       />
 
       <Session
-        session="Practice 2"
+        session={raceInfo.Sprint ? "Sprint Shootout" : "Practice 2"}
         dateAndTime={formatSessionDateTime(
           raceInfo.SecondPractice.date,
-          raceInfo.SecondPractice.time
+          raceInfo.SecondPractice.time,
+          raceInfo.Sprint ? true : false
         )}
         order={raceInfo.Sprint ? "flex-order-3 border-b" : "flex-order-2"}
       />
@@ -73,7 +51,9 @@ function SessionsTable({ raceInfo }) {
           session="Sprint"
           dateAndTime={formatSessionDateTime(
             raceInfo.Sprint.date,
-            raceInfo.Sprint.time
+            raceInfo.Sprint.time,
+            true,
+            30
           )}
           order={"flex-order-4"}
         />
