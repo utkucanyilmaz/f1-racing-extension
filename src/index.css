@@ -27,12 +27,17 @@ body {
   font-family: "Titillium Web", Arial, Helvetica, sans-serif;
   color: var(--f-white);
   background-color: var(--f-dark-blue);
-  margin: 0.3rem;
   font-size: 14px;
 }
 
 .App {
-  width: 380px;
+  display: flex;
+  width: 388px;
+}
+
+::selection {
+  background-color: var(--f-red);
+  color: var(--f-white);
 }
 
 .title-bg {
@@ -47,4 +52,18 @@ body {
   text-transform: uppercase;
   color: var(--f-white);
   font-size: 1.5rem;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  transition: opacity 0.3s ease;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--f-dark-blue);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--f-gray);
 }

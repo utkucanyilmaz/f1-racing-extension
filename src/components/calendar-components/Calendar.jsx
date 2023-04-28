@@ -20,7 +20,7 @@ function Calendar({ races }) {
     });
 
   return (
-    <>
+    <div className="race-calendar">
       <div className="calendar-header title-bg">
         <div className="calendar-header-title">{`${
           races && races[0].season
@@ -41,7 +41,7 @@ function Calendar({ races }) {
             />
           ))}
       </div>
-    </>
+    </div>
   );
 }
 
