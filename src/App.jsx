@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+
 import Race from "./components/race-components/Race";
 import Calendar from "./components/calendar-components/Calendar";
 import StandingsTable from "./components/standing-components/StandingsTable";
+import Carousel from "./components/Carousel";
+
 import { fetchRaceData, fetchDriverStandings } from "./api";
 
 function App() {
@@ -25,9 +28,11 @@ function App() {
 
   return (
     <div className="App">
-      <Race races={races} />
-      {/* <Calendar races={races} /> */}
-      {/* <StandingsTable driverStandings={driverStandings} /> */}
+      <Carousel>
+        <Race races={races} />
+        <Calendar races={races} />
+        <StandingsTable driverStandings={driverStandings} />
+      </Carousel>
     </div>
   );
 }
