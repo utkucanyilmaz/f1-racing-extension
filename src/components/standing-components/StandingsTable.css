@@ -1,4 +1,12 @@
 .standings-table {
+  --gradient-degree: 105deg;
+  --gradient-first-color-start: 0%;
+  --gradient-first-color-end: 65%;
+  --gradient-second-color-start: 75%;
+  --gradient-second-color-end: 100%;
+}
+
+.standings-table {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -17,7 +25,6 @@
 .standings-table-item {
   display: flex;
   justify-content: space-between;
-  background-color: var(--f-white);
   color: var(--f-dark-blue);
   border-radius: 6px;
   padding: 0.5rem;
@@ -51,25 +58,27 @@
 .ranking-info {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .driver-points {
   padding-block: 0.3rem;
   padding-inline: 0.6rem;
   border-radius: 999px;
-  background-color: var(--f-lighter-gray);
+  background-color: var(--f-white);
+  color: var(--f-dark-blue);
 }
 
-.standings-table-item:hover .driver-points {
+/* .standings-table-item:hover .driver-points {
   background-color: var(--f-gray);
   color: var(--f-white);
-}
+} */
 
 .driver-wins {
   display: flex;
   align-items: center;
   gap: 0.2rem;
+  color: var(--f-white);
 }
 
 .wins-trophy-icon {
@@ -77,52 +86,112 @@
   height: 1rem;
 }
 
-.red_bull:hover {
-  background-color: var(--f-redbull);
-  color: var(--f-white);
+.red_bull {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-redbull) var(--gradient-second-color-start),
+    var(--f-redbull) var(--gradient-second-color-end)
+  );
 }
 
-.aston_martin:hover {
-  background-color: var(--f-aston-martin);
-  color: var(--f-white);
+.aston_martin {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-aston-martin) var(--gradient-second-color-start),
+    var(--f-aston-martin) var(--gradient-second-color-end)
+  );
 }
 
-.ferrari:hover {
-  background-color: var(--f-ferrari);
-  color: var(--f-white);
+.ferrari {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-ferrari) var(--gradient-second-color-start),
+    var(--f-ferrari) var(--gradient-second-color-end)
+  );
 }
 
-.mercedes:hover {
-  background-color: var(--f-mercedes);
-  color: var(--f-white);
+.mercedes {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-mercedes) var(--gradient-second-color-start),
+    var(--f-mercedes) var(--gradient-second-color-end)
+  );
 }
 
-.mclaren:hover {
-  background-color: var(--f-mclaren);
-  color: var(--f-white);
+.mclaren {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-mclaren) var(--gradient-second-color-start),
+    var(--f-mclaren) var(--gradient-second-color-end)
+  );
 }
 
-.haas:hover {
-  background-color: var(--f-haas);
-  color: var(--f-white);
+.haas {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-haas) var(--gradient-second-color-start),
+    var(--f-haas) var(--gradient-second-color-end)
+  );
 }
 
-.alpine:hover {
-  background-color: var(--f-alpine);
-  color: var(--f-white);
+.alpine {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-alpine) var(--gradient-second-color-start),
+    var(--f-alpine) var(--gradient-second-color-end)
+  );
 }
 
-.alfa:hover {
-  background-color: var(--f-alfa-romeo);
-  color: var(--f-white);
+.alfa {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-alfa-romeo) var(--gradient-second-color-start),
+    var(--f-alfa-romeo) var(--gradient-second-color-end)
+  );
 }
 
-.alphatauri:hover {
-  background-color: var(--f-alphatauri);
-  color: var(--f-white);
+.alphatauri {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-alphatauri) var(--gradient-second-color-start),
+    var(--f-alphatauri) var(--gradient-second-color-end)
+  );
 }
 
-.williams:hover {
-  background-color: var(--f-williams);
-  color: var(--f-white);
+.williams {
+  background: var(--f-white);
+  background: linear-gradient(
+    var(--gradient-degree),
+    var(--f-white) var(--gradient-first-color-start),
+    var(--f-white) var(--gradient-first-color-end),
+    var(--f-williams) var(--gradient-second-color-start),
+    var(--f-williams) var(--gradient-second-color-end)
+  );
 }
