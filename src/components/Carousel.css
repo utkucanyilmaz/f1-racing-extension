@@ -1,6 +1,6 @@
 .carousel {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .carousel-container {
@@ -11,6 +11,7 @@
 .carousel-component {
   min-width: 380px;
   margin: 0.25rem;
+  align-self: flex-start;
 }
 
 .carousel-button {
@@ -54,6 +55,11 @@
 
 .carousel-button.next img {
   rotate: 180deg;
+}
+
+.zero-w-h {
+  width: 0;
+  height: 0;
 }
 
 .none {

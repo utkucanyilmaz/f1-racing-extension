@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import arrow from "../../public/icons/chevron-left-solid.svg";
+import arrow from "/icons/chevron-left-solid.svg";
 
 import "./Carousel.css";
 
@@ -22,15 +22,15 @@ function Carousel({ children }) {
     <div className="carousel">
       <div
         className="carousel-container"
-        // style={{
-        //   transform: `translateX(-${currentIndex * 100}%)`,
-        // }}
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+        }}
       >
         {children.map((component, index) => (
           <div
-            className={`${
-              index !== currentIndex ? "none" : "block"
-            } carousel-component`}
+            className={`carousel-component ${
+              index !== currentIndex ? "zero-w-h" : ""
+            }`}
             key={index}
           >
             {component}
