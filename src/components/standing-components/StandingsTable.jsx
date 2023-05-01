@@ -9,12 +9,12 @@ function StandingsTable({ driverStandings }) {
       <div className="standings-table-title title-bg">Driver Standings</div>
       {driverStandings &&
         driverStandings.map(driver => (
-          <div
-            key={driver.position}
-            className={`${driver.Constructors[0].constructorId} standings-table-item`}
-          >
+          <div key={driver.position} className="standings-table-item">
             <div className="driver-info">
               <div className="driver-pos">{driver.position}</div>
+              <span
+                className={`${driver.Constructors[0].constructorId} team-color`}
+              ></span>
               <div className="driver-fullname">
                 <span className="driver-name">{driver.Driver.givenName} </span>
                 <span className="driver-surname">

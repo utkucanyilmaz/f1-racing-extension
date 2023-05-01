@@ -28,10 +28,10 @@ body {
   color: var(--f-white);
   background-color: var(--f-dark-blue);
   font-size: 14px;
+  cursor: default;
 }
 
 .App {
-  display: flex;
   width: 388px;
 }
 

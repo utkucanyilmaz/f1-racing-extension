@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.1rem;
   font-weight: 600;
   cursor: default;
 }
@@ -19,27 +19,36 @@
   font-weight: 700;
   padding-block: 21px;
   padding-inline: 8px;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
 }
 
 .standings-table-item {
   display: flex;
   justify-content: space-between;
-  color: var(--f-dark-blue);
+  color: var(--f-white);
   border-radius: 6px;
-  padding: 0.5rem;
-  transition: background-color 0.2s ease;
+  padding: 0.4rem;
+  /* transition: background-color 0.2s ease; */
+}
+
+.standings-table-item:nth-of-type(2n + 1) {
+  background-color: var(--f-gray);
 }
 
 .driver-info {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .driver-pos {
   font-size: 1rem;
   font-weight: 700;
+}
+
+.team-color {
+  width: 4px;
+  height: 70%;
 }
 
 /* .driver-fullname {
@@ -65,8 +74,8 @@
   padding-block: 0.3rem;
   padding-inline: 0.6rem;
   border-radius: 999px;
-  background-color: var(--f-white);
-  color: var(--f-dark-blue);
+  background-color: var(--f-light-gray);
+  color: var(--f-white);
 }
 
 /* .standings-table-item:hover .driver-points {
@@ -87,111 +96,111 @@
 }
 
 .red_bull {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-redbull);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-redbull) var(--gradient-second-color-start),
     var(--f-redbull) var(--gradient-second-color-end)
-  );
+  ); */
 }
 
 .aston_martin {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-aston-martin);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-aston-martin) var(--gradient-second-color-start),
     var(--f-aston-martin) var(--gradient-second-color-end)
-  );
+  ); */
 }
 
 .ferrari {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-ferrari);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-ferrari) var(--gradient-second-color-start),
     var(--f-ferrari) var(--gradient-second-color-end)
-  );
+  ); */
 }
 
 .mercedes {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-mercedes);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-mercedes) var(--gradient-second-color-start),
     var(--f-mercedes) var(--gradient-second-color-end)
-  );
+  ); */
 }
 
 .mclaren {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-mclaren);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-mclaren) var(--gradient-second-color-start),
     var(--f-mclaren) var(--gradient-second-color-end)
-  );
+  ); */
 }
 
 .haas {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-haas);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-haas) var(--gradient-second-color-start),
     var(--f-haas) var(--gradient-second-color-end)
-  );
+  ); */
 }
 
 .alpine {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-alpine);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-alpine) var(--gradient-second-color-start),
     var(--f-alpine) var(--gradient-second-color-end)
-  );
+  ); */
 }
 
 .alfa {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-alfa-romeo);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-alfa-romeo) var(--gradient-second-color-start),
     var(--f-alfa-romeo) var(--gradient-second-color-end)
-  );
+  ); */
 }
 
 .alphatauri {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-alphatauri);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-alphatauri) var(--gradient-second-color-start),
     var(--f-alphatauri) var(--gradient-second-color-end)
-  );
+  ); */
 }
 
 .williams {
-  background: var(--f-white);
-  background: linear-gradient(
+  background: var(--f-williams);
+  /* background: linear-gradient(
     var(--gradient-degree),
     var(--f-white) var(--gradient-first-color-start),
     var(--f-white) var(--gradient-first-color-end),
     var(--f-williams) var(--gradient-second-color-start),
     var(--f-williams) var(--gradient-second-color-end)
-  );
+  ); */
 }
