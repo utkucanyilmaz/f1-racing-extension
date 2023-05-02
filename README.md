@@ -35,10 +35,10 @@ If you would like to modify or contribute to the F1 Racing Extension, follow the
 
 The F1 Racing Extension was built using the following technologies and APIs:
 
-![React](https://react.dev/)
-![Vite](https://vitejs.dev/)
-![Ergast API](http://ergast.com/mrd/)
-![REST Countries(for country flags)](https://restcountries.com/)
+[React](https://react.dev/)
+[Vite](https://vitejs.dev/)
+[Ergast API](http://ergast.com/mrd/)
+[REST Countries(for country flags)](https://restcountries.com/)
 
 ## License
 
