@@ -8,7 +8,10 @@ export const formatDate = date => {
 
 export const findNextRace = races => {
   const now = new Date().getTime();
-  return races.find(race => new Date(race.date).getTime() > now);
+
+  return races.find(
+    race => new Date(`${race.date}T${race.time}`).getTime() > now
+  );
 };
 
 export const formatSessionDateTime = (
