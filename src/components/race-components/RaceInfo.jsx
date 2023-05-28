@@ -5,10 +5,14 @@ function RaceInfo({ upcomingRace, flag }) {
   return (
     <div className="race-info">
       <div className="race-country-image">
-        <img
-          src={flag.svg}
-          alt={`${upcomingRace.raceInfo.Circuit.Location.country} flag`}
-        />
+        {flag ? (
+          <img
+            src={flag.svg}
+            alt={`${upcomingRace.raceInfo.Circuit.Location.country} flag`}
+          />
+        ) : (
+          <div className="race-country-image-placeholder"></div>
+        )}
       </div>
       <div>
         <div className="race-info-year">{upcomingRace.raceInfo.season}</div>

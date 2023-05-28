@@ -21,20 +21,25 @@ function Race({ races }) {
 
     const lastRaceDay = formatDate(raceInfo.date);
 
-    const flagResponse =
-      raceInfo.Circuit.Location.country === "Netherlands"
-        ? await fetch(
-            `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags&fullText=true`
-          )
-        : await fetch(
-            `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags`
-          );
-
-    const [{ flags }] = await flagResponse.json();
-
     setUpcomingRace({ raceInfo, firstRaceDay, lastRaceDay });
-    setFlag(flags);
-    setIsLoading(false);
+    try {
+      const flagResponse =
+        raceInfo.Circuit.Location.country === "Netherlands"
+          ? await fetch(
+              `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags&fullText=true`
+            )
+          : await fetch(
+              `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags`
+            );
+
+      const [{ flags }] = await flagResponse.json();
+
+      setFlag(flags);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   useEffect(() => {
