@@ -66,3 +66,7 @@ export const formatSessionDateTime = (
 
   return { date, time, endTime };
 };
+
+export const addLeadingZero = number => {
+  return number < 10 ? (number = "0" + number) : number;
+};

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Countdown.css";
-
-const addLeadingZero = number => {
-  return number < 10 ? (number = "0" + number) : number;
-};
+import { addLeadingZero } from "../../helpers";
 
 function Countdown({ date, time }) {
   const [timeLeft, setTimeLeft] = useState({
@@ -43,16 +40,16 @@ function Countdown({ date, time }) {
   return (
     <div className="countdown">
       <div className="number">
-        {addLeadingZero(timeLeft.days)} <span className="unit">Days</span>
+        <span className="unit">Days</span>
+        {addLeadingZero(timeLeft.days)}
       </div>
       <div className="number">
-        {addLeadingZero(timeLeft.hours)} <span className="unit">Hours</span>
+        <span className="unit">Hours</span>
+        {addLeadingZero(timeLeft.hours)}
       </div>
       <div className="number">
-        {addLeadingZero(timeLeft.minutes)} <span className="unit">Minutes</span>
-      </div>
-      <div className="number">
-        {addLeadingZero(timeLeft.seconds)} <span className="unit">Seconds</span>
+        <span className="unit">Minutes</span>
+        {addLeadingZero(timeLeft.minutes)}
       </div>
     </div>
   );

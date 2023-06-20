@@ -50,9 +50,6 @@ function Race({ races }) {
     <div className="race">
       {!isLoading && (
         <>
-          <div className="race-round">
-            Round {upcomingRace.raceInfo.round} - Upcoming Race
-          </div>
           <RaceInfo upcomingRace={upcomingRace} flag={flag} />
           <Countdown
             date={upcomingRace.raceInfo.date}

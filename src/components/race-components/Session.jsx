@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./Session.css";
 
 function Session({ session, dateAndTime, order }) {
