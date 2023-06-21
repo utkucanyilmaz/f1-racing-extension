@@ -1,31 +1,27 @@
 .session {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  place-items: center;
-  justify-items: start;
-  gap: 1rem;
-  text-transform: uppercase;
-}
-
-.border-b {
-  padding-bottom: 4px;
-  border-bottom: 2px solid var(--f-gray);
+  @apply grid grid-cols-4 w-full uppercase bg-f-gray rounded-3xl p-2 divide-x divide-dotted divide-f-light-gray;
 }
 
 .session-date {
-  font-size: 12px;
-  color: var(--f-light-gray);
-  place-self: center;
+  @apply flex flex-col items-center place-self-center;
+}
+
+.session-date .day {
+  @apply text-3xl font-semibold;
+}
+
+.session-date .month {
+  @apply text-sm;
+}
+
+.session-info {
+  @apply col-span-3 px-8 font-titillium;
+}
+
+.session-name {
+  @apply text-lg font-semibold;
 }
 
 .session-time {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--f-gray);
-  padding: 6px 10px;
-  border-radius: 10px;
-  place-self: end;
-  min-width: 100%;
+  @apply text-sm text-f-light-gray;
 }

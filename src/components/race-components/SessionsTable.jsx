@@ -32,7 +32,7 @@ function SessionsTable({ raceInfo }) {
           raceInfo.SecondPractice.time,
           raceInfo.Sprint ? true : false
         )}
-        order={raceInfo.Sprint ? "flex-order-3 border-b" : "flex-order-2"}
+        order={raceInfo.Sprint ? "flex-order-3" : "flex-order-2"}
       />
 
       {raceInfo.ThirdPractice && (

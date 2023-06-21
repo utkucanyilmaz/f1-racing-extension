@@ -6,9 +6,9 @@ function RaceInfo({ upcomingRace, flag }) {
   return (
     <div className="race-info">
       <div className="race-info-wrapper">
-        <div className="race-round">
+        {/* <div className="race-round">
           Round {upcomingRace.raceInfo.round} - Upcoming Race
-        </div>
+        </div> */}
         <div className="race-country-image">
           {flag ? (
             <img

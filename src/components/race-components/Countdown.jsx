@@ -40,16 +40,16 @@ function Countdown({ date, time }) {
   return (
     <div className="countdown">
       <div className="number">
-        <span className="unit">Days</span>
         {addLeadingZero(timeLeft.days)}
+        <span className="unit">Days</span>
       </div>
       <div className="number">
-        <span className="unit">Hours</span>
         {addLeadingZero(timeLeft.hours)}
+        <span className="unit">Hrs</span>
       </div>
       <div className="number">
-        <span className="unit">Minutes</span>
         {addLeadingZero(timeLeft.minutes)}
+        <span className="unit">Mins</span>
       </div>
     </div>
   );

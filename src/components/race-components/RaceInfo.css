@@ -1,15 +1,12 @@
 .race-info {
-  @apply relative bg-road bg-cover w-full h-44 rounded-3xl flex items-center justify-center gap-2 before:bg-black before:bg-gradient-to-t before:w-full before:h-full before:absolute before:rounded-3xl before:bg-opacity-60;
+  @apply relative bg-road bg-cover w-full h-40 rounded-3xl flex items-center justify-center gap-2 before:bg-black before:bg-gradient-to-t before:w-full before:h-full before:absolute before:rounded-3xl before:bg-opacity-60;
 }
 
 .race-info-wrapper {
-  @apply z-10 flex gap-2;
+  @apply z-10 flex flex-row gap-2;
 }
 
 .race-round {
-  position: absolute;
-  top: 0.4rem;
-  left: 0.4rem;
   padding-right: 0.3rem;
   padding-left: 0.1rem;
   font-weight: 600;

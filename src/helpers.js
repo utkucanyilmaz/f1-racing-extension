@@ -22,11 +22,9 @@ export const formatSessionDateTime = (
 ) => {
   const dateAndTime = new Date(`${sessionDate}T${sessionTime}`);
 
-  const date = dateAndTime.toLocaleString("en-GB", {
-    day: "numeric",
-    month: "short",
-    weekday: "short",
-  });
+  const day = dateAndTime.toLocaleString("en-GB", { day: "numeric" });
+  const month = dateAndTime.toLocaleString("en-GB", { month: "short" });
+  const weekday = dateAndTime.toLocaleString("en-GB", { weekday: "short" });
 
   const time = dateAndTime.toLocaleString("en-GB", {
     hour: "2-digit",
@@ -40,31 +38,37 @@ export const formatSessionDateTime = (
     minute: "2-digit",
   });
 
+  const commonDate = {
+    day,
+    month,
+    weekday,
+    time,
+    endTime,
+  };
+
   if (isSprintRace) {
     const sprintShootoutTime = new Date(
-      dateAndTime.getTime() - 1000 * 60 * 60
+      dateAndTime.getTime() - 1000 * 30 * 60
     ).toLocaleString("en-GB", {
       hour: "2-digit",
       minute: "2-digit",
     });
 
     const sprintShootoutEndTime = new Date(
-      dateAndTime.getTime() - 1000 * 60 * 15
+      dateAndTime.getTime() + 1000 * 14 * 60
     ).toLocaleString("en-GB", {
       hour: "2-digit",
       minute: "2-digit",
     });
 
     return {
-      date,
-      time,
-      endTime,
+      ...commonDate,
       sprintShootoutTime,
       sprintShootoutEndTime,
     };
   }
 
-  return { date, time, endTime };
+  return { ...commonDate };
 };
 
 export const addLeadingZero = number => {
