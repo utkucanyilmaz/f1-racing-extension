@@ -1,30 +1,40 @@
 .race-info {
-  @apply relative bg-road bg-cover w-full h-40 rounded-3xl flex items-center justify-center gap-2 before:bg-black before:bg-gradient-to-t before:w-full before:h-full before:absolute before:rounded-3xl before:bg-opacity-60;
+  @apply relative bg-road bg-cover bg-center w-full h-36 rounded-b-xl flex items-center justify-center gap-2 before:bg-black before:bg-gradient-to-t before:w-full before:h-full before:absolute before:rounded-b-xl before:bg-opacity-60;
 }
 
 .race-info-wrapper {
-  @apply z-10 flex flex-row gap-2;
+  @apply z-10 flex flex-col items-center gap-2;
 }
 
-.race-round {
-  padding-right: 0.3rem;
-  padding-left: 0.1rem;
-  font-weight: 600;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: var(--f-red);
+.race-country-image {
+  @apply h-4 max-w-min aspect-video overflow-hidden;
 }
 
-.race-info-title {
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
-  line-height: 1.3;
-  text-transform: uppercase;
+.race .race-country-image img {
+  @apply w-full h-full;
 }
 
-.race-info-date {
-  display: flex;
-  column-gap: 4px;
-  text-transform: uppercase;
+.race-location {
+  @apply flex items-center gap-x-2;
+}
+
+.race-round-date {
+  @apply flex divide-x divide-f-red text-xs uppercase;
+}
+
+.race-round,
+.race-date {
+  @apply px-2;
+}
+
+.race-year {
+  @apply text-base font-titillium;
+}
+
+.race-title {
+  @apply text-xl font-titillium;
+}
+
+.race-country {
+  @apply text-xs;
 }
