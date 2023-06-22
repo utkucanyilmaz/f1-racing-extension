@@ -32,7 +32,11 @@ body {
 }
 
 .App {
-  @apply w-[388px];
+  @apply w-[320px];
+}
+
+.times-displayed {
+  @apply self-center text-[10px] mb-2;
 }
 
 ::selection {

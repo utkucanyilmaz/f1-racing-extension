@@ -1,28 +1,3 @@
 .race {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-  column-gap: 10px;
-  width: 100%;
-}
-
-.race-country-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  aspect-ratio: 16/9;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.race .race-country-image img {
-  width: 100%;
-  height: 100%;
-}
-
-.times-displayed {
-  align-self: center;
-  font-size: 10px;
+  @apply flex relative flex-col items-start px-1;
 }

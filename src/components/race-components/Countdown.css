@@ -1,9 +1,9 @@
 .countdown {
-  @apply py-2 text-sm uppercase flex items-center justify-center gap-2 w-full;
+  @apply py-1 text-sm uppercase flex items-center justify-center gap-1 w-full;
 }
 
 .countdown .number {
-  @apply text-5xl flex flex-col items-center justify-center p-4 font-semibold bg-f-gray rounded-3xl w-full;
+  @apply text-2xl flex flex-col items-center justify-center p-2 font-semibold bg-f-gray rounded-xl w-full;
 }
 
 .countdown .unit {

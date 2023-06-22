@@ -51,6 +51,10 @@ function Countdown({ date, time }) {
         {addLeadingZero(timeLeft.minutes)}
         <span className="unit">Mins</span>
       </div>
+      {/* <div className="number">
+        {addLeadingZero(timeLeft.seconds)}
+        <span className="unit">Secs</span>
+      </div> */}
     </div>
   );
 }

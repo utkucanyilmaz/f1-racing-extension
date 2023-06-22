@@ -9,8 +9,7 @@
 }
 
 .carousel-component {
-  min-width: 380px;
-  margin: 0.25rem;
+  min-width: 320px;
   align-self: flex-start;
 }
 
