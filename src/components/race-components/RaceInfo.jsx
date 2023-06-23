@@ -2,7 +2,6 @@ import React from "react";
 import "./RaceInfo.css";
 
 function RaceInfo({ upcomingRace, flag }) {
-  console.log(upcomingRace);
   return (
     <div className="race-info">
       <div className="race-info-wrapper">
