@@ -1,36 +1,23 @@
 .calendar-item {
-  display: flex;
-  justify-content: flex-start;
-  column-gap: 12px;
-  border-bottom-left-radius: 8px;
-  border-bottom: 2px solid var(--f-gray);
-  align-items: center;
-  font-size: 12px;
+  @apply flex gap-x-3 rounded-bl-lg border-b-2 border-b-f-gray text-sm mb-2;
 }
 
 .calendar-item-round {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 100%;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 0.4rem;
-  background-color: var(--f-gray);
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+  @apply flex items-center justify-center w-9 h-auto bg-f-gray rounded-t-md rounded-bl-md font-semibold text-xl;
+}
+
+.calendar-item-circuit-name {
+  @apply text-sm;
 }
 
 .calendar-item-country {
-  margin-left: auto;
+  @apply uppercase text-f-light-gray text-xs;
 }
 
 .next-race > .calendar-item-round {
-  background-color: var(--f-red);
+  @apply bg-f-red;
 }
 
 .calendar-item.next-race {
-  border-bottom: 2px solid var(--f-red);
+  @apply border-b-2 border-b-f-red;
 }

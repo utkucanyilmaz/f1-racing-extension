@@ -6,6 +6,10 @@
   @apply flex justify-between text-white rounded-t-xl border-t border-x border-f-gray p-2;
 }
 
+.standings-table-item:last-child {
+  @apply border rounded-xl;
+}
+
 .driver-info {
   @apply flex;
 }
