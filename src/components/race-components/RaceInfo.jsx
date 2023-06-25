@@ -1,16 +1,16 @@
 import React from "react";
 import "./RaceInfo.css";
 
-function RaceInfo({ upcomingRace, flag }) {
+function RaceInfo({ nextRace, flag }) {
   return (
     <div className="race-info">
       <div className="race-info-wrapper">
-        <div className="race-year">{upcomingRace.raceInfo.season}</div>
-        <div className="race-title">{upcomingRace.raceInfo.raceName}</div>
+        <div className="race-year">{nextRace.raceInfo.season}</div>
+        <div className="race-title">{nextRace.raceInfo.raceName}</div>
         <div className="race-round-date">
-          <div className="race-round">Round {upcomingRace.raceInfo.round}</div>
+          <div className="race-round">Round {nextRace.raceInfo.round}</div>
           <div className="race-date">
-            {`${upcomingRace.firstRaceDay} - ${upcomingRace.lastRaceDay}`}
+            {`${nextRace.firstRaceDay} - ${nextRace.lastRaceDay}`}
           </div>
         </div>
         <div className="race-location">
@@ -18,16 +18,16 @@ function RaceInfo({ upcomingRace, flag }) {
             {flag ? (
               <img
                 src={flag.svg}
-                alt={`${upcomingRace.raceInfo.Circuit.Location.country} flag`}
+                alt={`${nextRace.raceInfo.Circuit.Location.country} flag`}
               />
             ) : (
               <div className="race-country-image-placeholder"></div>
             )}
           </div>
           <div className="race-country">
-            {upcomingRace.raceInfo.Circuit.Location.country} -{" "}
+            {nextRace.raceInfo.Circuit.Location.country} -{" "}
             <span className="circuit-name">
-              {upcomingRace.raceInfo.Circuit.circuitName}
+              {nextRace.raceInfo.Circuit.circuitName}
             </span>
           </div>
         </div>

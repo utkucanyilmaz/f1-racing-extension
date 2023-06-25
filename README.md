@@ -4,7 +4,7 @@ The F1 Racing Extension is a Chrome extension that displays the schedule for the
 
 ## Screenshot
 
-![Screenshot of F1 Racing Extension](./screenshot.png "F1 Racing Extension")
+![Screenshot of F1 Racing Extension](./v1/screenshot.png "F1 Racing Extension")
 
 ## Usage
 

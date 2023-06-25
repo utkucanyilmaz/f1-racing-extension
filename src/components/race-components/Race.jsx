@@ -10,18 +10,18 @@ import { formatDate, findNextRace } from "../../helpers";
 import "./Race.css";
 
 function Race({ races }) {
-  const [upcomingRace, setUpcomingRace] = useState(null);
+  const [nextRace, setNextRace] = useState(null);
   const [flag, setFlag] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  async function getUpcomingRaceData() {
+  async function getNextRaceData() {
     const raceInfo = findNextRace(races);
 
     const firstRaceDay = formatDate(raceInfo.FirstPractice.date);
 
     const lastRaceDay = formatDate(raceInfo.date);
 
-    setUpcomingRace({ raceInfo, firstRaceDay, lastRaceDay });
+    setNextRace({ raceInfo, firstRaceDay, lastRaceDay });
     try {
       const flagResponse =
         raceInfo.Circuit.Location.country === "Netherlands"
@@ -43,19 +43,20 @@ function Race({ races }) {
   }
 
   useEffect(() => {
-    races && getUpcomingRaceData();
+    races && getNextRaceData();
   }, [races]);
 
   return (
     <div className="race">
       {!isLoading && (
         <>
-          <RaceInfo upcomingRace={upcomingRace} flag={flag} />
+          <RaceInfo nextRace={nextRace} flag={flag} />
+
           <Countdown
-            date={upcomingRace.raceInfo.date}
-            time={upcomingRace.raceInfo.time}
+            date={nextRace.raceInfo.date}
+            time={nextRace.raceInfo.time}
           />
-          <SessionsTable raceInfo={upcomingRace.raceInfo} />
+          <SessionsTable raceInfo={nextRace.raceInfo} />
           <div className="times-displayed">
             Times displayed are your local times.
           </div>
