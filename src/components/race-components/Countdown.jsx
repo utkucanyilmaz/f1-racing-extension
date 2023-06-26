@@ -35,7 +35,7 @@ function Countdown({ date, time }) {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [date]);
+  }, []);
 
   return (
     <div className="countdown">

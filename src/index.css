@@ -1,20 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap");
 
+*::-webkit-scrollbar {
+  @apply h-1 w-1;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-f-dark-blue;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-f-red rounded-md;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --f-red: #e10600;
-  --f-dark-blue: #15151e;
-  --f-gray: #38383f;
-  --f-light-gray: #7d7d81;
-  --f-lighter-gray: #ededed;
-  --f-white: #ffffff;
-  --f-offwhite: #faf9f6;
-  --f-dark-red: #6a0300;
-
   --f-mercedes: #00d2be;
   --f-redbull: #0600ef;
   --f-mclaren: #ff8700;
@@ -28,11 +31,7 @@
 }
 
 body {
-  @apply font-poppins text-white bg-f-dark-blue text-sm cursor-default;
-}
-
-.App {
-  @apply w-[320px];
+  @apply font-poppins text-white bg-f-dark-blue text-sm cursor-default overflow-y-hidden;
 }
 
 .times-displayed {
@@ -41,18 +40,4 @@ body {
 
 ::selection {
   @apply bg-f-red text-white;
-}
-
-*::-webkit-scrollbar {
-  width: 6px;
-  transition: opacity 0.3s ease;
-}
-
-*::-webkit-scrollbar-track {
-  background: var(--f-dark-blue);
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 999px;
-  background: var(--f-gray);
 }

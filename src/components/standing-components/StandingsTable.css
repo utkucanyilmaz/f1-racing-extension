@@ -1,5 +1,5 @@
 .standings-table {
-  @apply flex flex-col justify-center font-titillium p-1;
+  @apply flex flex-col justify-center font-titillium p-1 w-full;
 }
 
 .standings-table-item {

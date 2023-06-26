@@ -3,7 +3,7 @@ import "./CalendarItem.css";
 
 function CalendarItem({ country, date, round, isNextRace, circuitName }) {
   return (
-    <div className={`calendar-item ${isNextRace && "next-race"}`}>
+    <div className={`calendar-item ${isNextRace ? "next-race" : ""}`}>
       <div className="calendar-item-round">{round}</div>
       <div>
         <div className="calendar-item-circuit-name">{circuitName}</div>

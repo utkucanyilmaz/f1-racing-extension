@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
 
-import Countdown from "./Countdown";
 import RaceInfo from "./RaceInfo";
-import SessionsTable from "./SessionsTable";
-import LoadingPlaceholder from "./LoadingPlaceholder";
+import RaceWeekend from "./RaceWeekend";
+import Calendar from "../calendar-components/Calendar";
+import StandingsTable from "../standing-components/StandingsTable";
+import NavigationBar from "../NavigationBar";
+import LoadingPlacholder from "./LoadingPlaceholder";
 
 import { formatDate, findNextRace } from "../../helpers";
 
 import "./Race.css";
 
-function Race({ races }) {
+function Race({ races, driverStandings }) {
   const [nextRace, setNextRace] = useState(null);
   const [flag, setFlag] = useState(null);
+  const [activeTab, setActiveTab] = useState("race-weekend");
   const [isLoading, setIsLoading] = useState(true);
 
   async function getNextRaceData() {
@@ -49,20 +52,22 @@ function Race({ races }) {
   return (
     <div className="race">
       {!isLoading && (
-        <>
+        <div className="w-full flex flex-col">
           <RaceInfo nextRace={nextRace} flag={flag} />
-
-          <Countdown
-            date={nextRace.raceInfo.date}
-            time={nextRace.raceInfo.time}
-          />
-          <SessionsTable raceInfo={nextRace.raceInfo} />
-          <div className="times-displayed">
-            Times displayed are your local times.
-          </div>
-        </>
+          <NavigationBar activeTab={activeTab} setActiveTab={setActiveTab} />
+          {activeTab === "race-weekend" && (
+            <RaceWeekend
+              date={nextRace.raceInfo.date}
+              time={nextRace.raceInfo.time}
+              raceInfo={nextRace.raceInfo}
+            />
+          )}
+          {activeTab === "calendar" && <Calendar races={races} />}
+          {activeTab === "standings" && (
+            <StandingsTable driverStandings={driverStandings} />
+          )}
+        </div>
       )}
-      {isLoading && <LoadingPlaceholder />}
     </div>
   );
 }
