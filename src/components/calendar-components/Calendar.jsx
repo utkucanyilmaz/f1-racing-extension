@@ -1,36 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import CalendarItem from "./CalendarItem";
 import "./Calendar.css";
+
+import NavigationItem from "../NavigationItem";
 
 import { findNextRace, formatDate } from "../../helpers";
 
 function Calendar({ races }) {
+  const nextRace = findNextRace(races);
+  const [activeTab, setActiveTab] = useState("upcoming");
+
+  const handleClick = tab => {
+    setActiveTab(tab);
+  };
+
   const racesData =
     races &&
-    races.map(race => {
-      const nextRace = findNextRace(races);
-
-      return {
-        country: race.Circuit.Location.country,
-        date: formatDate(race.date),
-        round: race.round,
-        isNextRace: race.round === nextRace.round ? true : false,
-        circuitName: race.Circuit.circuitName,
-      };
+    races.filter(race => {
+      if (activeTab === "upcoming") {
+        return +race.round >= +nextRace.round;
+      } else if (activeTab === "past") {
+        return +race.round < +nextRace.round;
+      }
     });
 
   return (
     <div className="race-calendar">
+      <div className="inline-flex items-center justify-evenly gap-x-4 text-xs pb-2">
+        <NavigationItem
+          isActive={activeTab === "upcoming"}
+          onItemClick={() => handleClick("upcoming")}
+        >
+          Upcoming
+        </NavigationItem>
+        <NavigationItem
+          isActive={activeTab === "past"}
+          onItemClick={() => handleClick("past")}
+        >
+          Past
+        </NavigationItem>
+      </div>
       <div className="calendar">
         {races &&
           racesData.map(race => (
             <CalendarItem
               key={race.round}
-              country={race.country}
-              date={race.date}
+              country={race.Circuit.Location.country}
+              date={formatDate(race.date)}
               round={race.round}
-              isNextRace={race.isNextRace}
-              circuitName={race.circuitName}
+              isNextRace={race.round === nextRace.round ? true : false}
+              circuitName={race.Circuit.circuitName}
             />
           ))}
       </div>
