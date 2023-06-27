@@ -1,0 +1,11 @@
+.navbar-button {
+  @apply absolute flex items-center justify-center opacity-0 bg-f-gray bg-opacity-40 group-hover:opacity-100 rounded-full top-1/2 -translate-y-1/2 z-10 w-8 h-8 transition-opacity select-none;
+}
+
+.navbar-button img {
+  @apply w-4 h-4;
+}
+
+.swiper-button-disabled {
+  @apply hidden;
+}

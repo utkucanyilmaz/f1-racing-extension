@@ -2,7 +2,7 @@ import React from "react";
 
 function NavigationItem({ isActive, children, onItemClick }) {
   return (
-    <li
+    <button
       onClick={onItemClick}
       className={`py-2 px-4 border-t rounded-full ${
         isActive
@@ -11,7 +11,7 @@ function NavigationItem({ isActive, children, onItemClick }) {
       }`}
     >
       {children}
-    </li>
+    </button>
   );
 }
 
