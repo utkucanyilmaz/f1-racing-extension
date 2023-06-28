@@ -1,8 +1,8 @@
+const baseUrl = "https://ergast.com/api/f1";
+
 export const fetchRaceData = async () => {
   try {
-    const raceDataResponse = await fetch(
-      "https://ergast.com/api/f1/current.json"
-    );
+    const raceDataResponse = await fetch(`${baseUrl}/current.json`);
     const {
       MRData: {
         RaceTable: { Races },
@@ -18,7 +18,7 @@ export const fetchRaceData = async () => {
 export const fetchDriverStandings = async () => {
   try {
     const driverStandings = await fetch(
-      "https://ergast.com/api/f1/current/driverStandings.json"
+      `${baseUrl}/current/driverStandings.json`
     );
 
     const {
@@ -28,6 +28,23 @@ export const fetchDriverStandings = async () => {
     } = await driverStandings.json();
 
     return StandingsLists[0].DriverStandings;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const fetchConstructorStandings = async () => {
+  try {
+    const constructorStandings = await fetch(
+      `${baseUrl}/current/constructorStandings.json`
+    );
+
+    const {
+      MRData: {
+        StandingsTable: { StandingsLists },
+      },
+    } = await constructorStandings.json();
+    return StandingsLists[0].ConstructorStandings;
   } catch (error) {
     console.log(error);
   }

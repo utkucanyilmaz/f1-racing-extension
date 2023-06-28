@@ -11,7 +11,7 @@ import { formatDate, findNextRace } from "../../helpers";
 
 import "./Race.css";
 
-function Race({ races, driverStandings }) {
+function Race({ races, driverStandings, constructorStandings }) {
   const [nextRace, setNextRace] = useState(null);
   const [flag, setFlag] = useState(null);
   const [activeTab, setActiveTab] = useState("race-weekend");
@@ -64,7 +64,10 @@ function Race({ races, driverStandings }) {
           )}
           {activeTab === "calendar" && <Calendar races={races} />}
           {activeTab === "standings" && (
-            <StandingsTable driverStandings={driverStandings} />
+            <StandingsTable
+              driverStandings={driverStandings}
+              constructorStandings={constructorStandings}
+            />
           )}
         </div>
       )}

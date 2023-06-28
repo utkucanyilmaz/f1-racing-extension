@@ -1,31 +1,41 @@
-import React from "react";
-
+import { useState } from "react";
+import NavigationItem from "../NavigationItem";
 import "./StandingsTable.css";
 
-function StandingsTable({ driverStandings }) {
+import DriverStandings from "./DriverStandings";
+import ConstructorStandings from "./ConstructorStandings";
+
+function StandingsTable({ driverStandings, constructorStandings }) {
+  const [activeTab, setActiveTab] = useState("driver");
+
+  const handleClick = tab => {
+    setActiveTab(tab);
+  };
   return (
-    <div className="standings-table">
-      {driverStandings &&
-        driverStandings.map(driver => (
-          <div key={driver.position} className="standings-table-item">
-            <div className="driver-info">
-              <div className="driver-pos">{driver.position}</div>
+    <div className="standings">
+      <div className="inline-flex items-center gap-x-4 text-xs mt-1">
+        <NavigationItem
+          isActive={activeTab === "driver"}
+          onItemClick={() => handleClick("driver")}
+        >
+          Driver
+        </NavigationItem>
+        <NavigationItem
+          isActive={activeTab === "constructor"}
+          onItemClick={() => handleClick("constructor")}
+        >
+          Constructor
+        </NavigationItem>
+      </div>
 
-              <div className="driver">
-                <div className="driver-name">
-                  {driver.Driver.givenName}&nbsp;{driver.Driver.familyName}
-                </div>
-                <div className="constructor-name">
-                  {driver.Constructors[0].name}
-                </div>
-              </div>
-            </div>
-
-            <div className="driver-points">
-              {driver.points} <span className="points">PTS</span>
-            </div>
-          </div>
-        ))}
+      <div className="standings-table">
+        {activeTab === "driver" && (
+          <DriverStandings driverStandings={driverStandings} />
+        )}
+        {activeTab === "constructor" && (
+          <ConstructorStandings constructorStandings={constructorStandings} />
+        )}
+      </div>
     </div>
   );
 }
