@@ -26,7 +26,7 @@ function Calendar({ races }) {
 
   return (
     <div className="race-calendar">
-      <div className="inline-flex items-center justify-evenly gap-x-4 text-xs pb-2">
+      <div className="inline-flex items-center gap-x-4 text-xs mt-1">
         <NavigationItem
           isActive={activeTab === "upcoming"}
           onItemClick={() => handleClick("upcoming")}
@@ -40,6 +40,7 @@ function Calendar({ races }) {
           Past
         </NavigationItem>
       </div>
+
       <div className="calendar">
         {races &&
           racesData.map(race => (
