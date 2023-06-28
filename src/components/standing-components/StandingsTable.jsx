@@ -12,7 +12,7 @@ function StandingsTable({ driverStandings, constructorStandings }) {
     setActiveTab(tab);
   };
   return (
-    <div className="standings">
+    <div className="standings animate-fade-in">
       <div className="inline-flex items-center gap-x-4 text-xs mt-1">
         <NavigationItem
           isActive={activeTab === "driver"}

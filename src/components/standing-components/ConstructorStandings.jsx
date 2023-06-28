@@ -2,7 +2,7 @@ import React from "react";
 
 function ConstructorStandings({ constructorStandings }) {
   return (
-    <div>
+    <div className="animate-fade-in">
       {constructorStandings &&
         constructorStandings.map(constructor => (
           <div key={constructor.position} className="standings-table-item">

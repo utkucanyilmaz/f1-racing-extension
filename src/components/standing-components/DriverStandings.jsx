@@ -2,7 +2,7 @@ import React from "react";
 
 function DriverStandings({ driverStandings }) {
   return (
-    <div>
+    <div className="animate-fade-in">
       {driverStandings &&
         driverStandings.map(driver => (
           <div key={driver.position} className="standings-table-item">

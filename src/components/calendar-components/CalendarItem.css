@@ -1,5 +1,5 @@
 .calendar-item {
-  @apply flex gap-x-3 rounded-bl-2xl border-b-2 border-b-f-gray text-sm mb-2;
+  @apply flex gap-x-3 rounded-bl-2xl border-b-2 border-b-f-gray text-sm mb-2 animate-fade-in;
 }
 
 .calendar-item-round {

@@ -25,7 +25,7 @@ function Calendar({ races }) {
     });
 
   return (
-    <div className="race-calendar">
+    <div className="race-calendar animate-fade-in">
       <div className="inline-flex items-center gap-x-4 text-xs mt-1">
         <NavigationItem
           isActive={activeTab === "upcoming"}

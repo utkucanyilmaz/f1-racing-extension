@@ -21,6 +21,17 @@ export default {
       backgroundImage: {
         road: "url('/backgrounds/photo-1571826856387-b633b9ebd93d.avif')",
       },
+
+      animation: {
+        "fade-in": "fade-in 0.3s ease",
+      },
+
+      keyframes: {
+        "fade-in": {
+          "0%": { opacity: "0%" },
+          "100%": { opacity: "100%" },
+        },
+      },
     },
   },
   plugins: [],
