@@ -22,7 +22,7 @@ function NavigationBar({ activeTab, setActiveTab }) {
         prevEl: ".prev",
         nextEl: ".next",
       }}
-      className="py-1 relative group"
+      className="mt-1 relative group"
       slidesPerView={2}
     >
       <SwiperSlide>
