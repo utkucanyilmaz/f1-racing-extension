@@ -30,12 +30,16 @@
   --f-haas: #b6babd;
 }
 
+html {
+  @apply text-sm;
+}
+
 body {
   @apply font-poppins text-white bg-f-dark-blue text-sm cursor-default overflow-y-hidden;
 }
 
 .times-displayed {
-  @apply self-center text-[10px] mb-2;
+  @apply text-center text-[10px] mb-2;
 }
 
 ::selection {
