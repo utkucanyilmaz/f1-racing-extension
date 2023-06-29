@@ -49,6 +49,14 @@ function NavigationBar({ activeTab, setActiveTab }) {
           Standings
         </NavigationItem>
       </SwiperSlide>
+      <SwiperSlide>
+        <NavigationItem
+          isActive={activeTab === "last-race"}
+          onItemClick={() => handleItemClick("last-race")}
+        >
+          Last Race
+        </NavigationItem>
+      </SwiperSlide>
       <button className="prev navbar-button left-0">
         <img src={chevron} alt="Prev" />
       </button>

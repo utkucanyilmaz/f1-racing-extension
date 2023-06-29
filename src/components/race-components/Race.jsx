@@ -5,13 +5,19 @@ import RaceWeekend from "./RaceWeekend";
 import Calendar from "../calendar-components/Calendar";
 import StandingsTable from "../standing-components/StandingsTable";
 import NavigationBar from "../NavigationBar";
+import LastRaceResults from "../last-race-components/LastRaceResults";
 import LoadingPlacholder from "./LoadingPlaceholder";
 
 import { formatDate, findNextRace } from "../../helpers";
 
 import "./Race.css";
 
-function Race({ races, driverStandings, constructorStandings }) {
+function Race({
+  races,
+  driverStandings,
+  constructorStandings,
+  lastRaceResults,
+}) {
   const [nextRace, setNextRace] = useState(null);
   const [flag, setFlag] = useState(null);
   const [activeTab, setActiveTab] = useState("race-weekend");
@@ -68,6 +74,9 @@ function Race({ races, driverStandings, constructorStandings }) {
               driverStandings={driverStandings}
               constructorStandings={constructorStandings}
             />
+          )}
+          {activeTab === "last-race" && (
+            <LastRaceResults lastRaceResults={lastRaceResults} />
           )}
         </div>
       )}

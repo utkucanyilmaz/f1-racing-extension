@@ -6,12 +6,14 @@ import {
   fetchRaceData,
   fetchDriverStandings,
   fetchConstructorStandings,
+  fetchLastRaceResults,
 } from "./api";
 
 function App() {
   const [races, setRaces] = useState(null);
   const [driverStandings, setDriverStandings] = useState(null);
   const [constructorStandings, setConstructorStandings] = useState(null);
+  const [lastRaceResults, setLastRaceResults] = useState(null);
 
   useEffect(() => {
     const getRaces = async () => {
@@ -29,8 +31,14 @@ function App() {
       setConstructorStandings(constructorStandingsData);
     };
 
+    const getLastRaceResults = async () => {
+      const lastRaceResultsData = await fetchLastRaceResults();
+      setLastRaceResults(lastRaceResultsData);
+    };
+
     getDriverStandings();
     getConstructorStandings();
+    getLastRaceResults();
     getRaces();
   }, []);
 
@@ -40,6 +48,7 @@ function App() {
         races={races}
         driverStandings={driverStandings}
         constructorStandings={constructorStandings}
+        lastRaceResults={lastRaceResults}
       />
     </div>
   );

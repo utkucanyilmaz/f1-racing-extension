@@ -49,3 +49,18 @@ export const fetchConstructorStandings = async () => {
     console.log(error);
   }
 };
+
+export const fetchLastRaceResults = async () => {
+  try {
+    const lastRaceResults = await fetch(`${baseUrl}/current/last/results.json`);
+
+    const {
+      MRData: {
+        RaceTable: { Races },
+      },
+    } = await lastRaceResults.json();
+    return Races[0];
+  } catch (error) {
+    console.log(error);
+  }
+};
