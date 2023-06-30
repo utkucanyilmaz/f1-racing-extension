@@ -56,7 +56,7 @@ function Race({
   }, [races]);
 
   return (
-    <div className="race">
+    <div className="flex relative flex-col px-1 w-80">
       {!isLoading && (
         <div className="w-full flex flex-col">
           <RaceInfo nextRace={nextRace} flag={flag} />

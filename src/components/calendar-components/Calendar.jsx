@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import CalendarItem from "./CalendarItem";
-import "./Calendar.css";
 
 import NavigationItem from "../NavigationItem";
 
@@ -41,7 +40,7 @@ function Calendar({ races }) {
         </NavigationItem>
       </div>
 
-      <div className="calendar">
+      <div className="p-1 max-h-80 overflow-y-scroll">
         {races &&
           racesData.map(race => (
             <CalendarItem
