@@ -80,6 +80,7 @@ function Race({
           )}
         </div>
       )}
+      {isLoading && <LoadingPlacholder />}
     </div>
   );
 }

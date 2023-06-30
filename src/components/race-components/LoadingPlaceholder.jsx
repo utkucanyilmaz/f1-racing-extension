@@ -1,49 +1,25 @@
 import React from "react";
-import "./LoadingPlaceholder.css";
+import Skeleton from "../skeleton/Skeleton";
 
 function LoadingPlaceholder() {
   return (
     <>
-      <div className="race-info-placeholder">
-        <div className="race-info-placeholder__flag placeholder-anim"></div>
-        <div className="race-info-placeholder__text">
-          <div className="year-placeholder placeholder-anim"></div>
-          <div className="name-placeholder placeholder-anim"></div>
-          <div className="date-placeholder placeholder-anim"></div>
+      <div className="flex flex-col gap-1">
+        <Skeleton
+          width={273}
+          height={126}
+          className={"rounded-b-xl rounded-t-none"}
+        />
+        <div className="flex gap-x-4">
+          <Skeleton width={120} height={32} />
+          <Skeleton width={100} height={32} />
         </div>
-      </div>
-      <div className="countdown-placeholder">
-        <div className="box placeholder-anim"></div>
-        <div className="box placeholder-anim"></div>
-        <div className="box placeholder-anim"></div>
-        <div className="box placeholder-anim"></div>
-      </div>
-      <div className="sessions-table-placeholder">
-        <div className="row">
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim time"></div>
+        <div className="flex gap-x-1">
+          <Skeleton width={88} height={56} />
+          <Skeleton width={88} height={56} />
+          <Skeleton width={88} height={56} />
         </div>
-        <div className="row">
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim time"></div>
-        </div>
-        <div className="row">
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim time"></div>
-        </div>
-        <div className="row">
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim time"></div>
-        </div>
-        <div className="row">
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim"></div>
-          <div className="col placeholder-anim time"></div>
-        </div>
+        <Skeleton width={273} height={246} />
       </div>
     </>
   );
