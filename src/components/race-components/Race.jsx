@@ -10,8 +10,6 @@ import LoadingPlacholder from "./LoadingPlaceholder";
 
 import { formatDate, findNextRace } from "../../helpers";
 
-import "./Race.css";
-
 function Race({
   races,
   driverStandings,
