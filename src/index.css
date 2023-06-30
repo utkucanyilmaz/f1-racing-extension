@@ -1,18 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap");
 
-*::-webkit-scrollbar {
-  @apply h-1 w-1;
-}
-
-*::-webkit-scrollbar-track {
-  @apply bg-f-dark-blue;
-}
-
-*::-webkit-scrollbar-thumb {
-  @apply bg-f-red rounded-md;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,6 +16,18 @@
   --f-alphatauri: #0a1c2e;
   --f-williams: #37bedd;
   --f-haas: #b6babd;
+}
+
+*::-webkit-scrollbar {
+  @apply h-1 w-1;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-f-dark-blue;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-f-red rounded-md;
 }
 
 html {

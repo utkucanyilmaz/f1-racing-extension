@@ -4,7 +4,7 @@ The F1 Racing Extension is a Chrome extension that displays the schedule for the
 
 ## Screenshot
 
-![Screenshot of F1 Racing Extension](./v1/screenshot.png "F1 Racing Extension")
+![Screenshot of F1 Racing Extension](./screenshot.jpg "F1 Racing Extension")
 
 ## Usage
 
@@ -20,7 +20,7 @@ To install the extension, follow these steps:
 - Open the `chrome://extensions` page in your Chrome browser.
 - Turn on the "Developer mode" switch in the top right corner of the page.
 - Click the "Load unpacked" button in the top left corner of the page.
-- Select the files in the downloaded `v1` folder and click "OK".
+- Select the files in the downloaded `dist` folder and click "OK".
 
 ## Development
 
