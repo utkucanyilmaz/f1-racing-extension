@@ -15,13 +15,11 @@ function RaceInfo({ nextRace, flag }) {
         </div>
         <div className="race-location">
           <div className="race-country-image">
-            {flag ? (
+            {flag && (
               <img
                 src={flag.svg}
                 alt={`${nextRace.raceInfo.Circuit.Location.country} flag`}
               />
-            ) : (
-              <div className="race-country-image-placeholder"></div>
             )}
           </div>
           <div className="race-country">

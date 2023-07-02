@@ -29,18 +29,20 @@ function Race({
     const lastRaceDay = formatDate(raceInfo.date);
 
     setNextRace({ raceInfo, firstRaceDay, lastRaceDay });
+
     try {
       const flagResponse =
         raceInfo.Circuit.Location.country === "Netherlands"
           ? await fetch(
               `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags&fullText=true`
             )
+          : raceInfo.Circuit.Location.country === "UK"
+          ? await fetch("https://restcountries.com/v3.1/name/gb?fields=flags")
           : await fetch(
               `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags`
             );
 
       const [{ flags }] = await flagResponse.json();
-
       setFlag(flags);
     } catch (e) {
       console.log(e);
