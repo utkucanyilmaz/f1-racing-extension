@@ -13,7 +13,7 @@ function LastRaceTableItem({
   return (
     <div
       className={`flex justify-between border rounded-xl mb-1 p-2 ${
-        fastestLap.rank === "1" ? "border-purple-500" : "border-f-gray "
+        fastestLap?.rank === "1" ? "border-purple-500" : "border-f-gray "
       }`}
     >
       <div className="flex">
@@ -21,10 +21,10 @@ function LastRaceTableItem({
         <div>
           <div className="flex gap-x-2">
             {driverFullName}
-            {fastestLap.rank === "1" && (
+            {fastestLap?.rank === "1" && (
               <span className="text-purple-500 flex items-center gap-x-1">
                 <img className="w-3 h-3" src={stopWatch} alt="fastest lap" />
-                {fastestLap.Time.time}
+                {fastestLap?.Time.time}
               </span>
             )}
           </div>
