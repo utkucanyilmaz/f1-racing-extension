@@ -11,7 +11,7 @@
 }
 
 .session-date .month {
-  @apply text-xs font-light;
+  @apply text-xs font-normal;
 }
 
 .session-info {
@@ -23,5 +23,5 @@
 }
 
 .session-time {
-  @apply text-xs text-f-light-gray;
+  @apply text-xs text-f-lighter-gray;
 }
