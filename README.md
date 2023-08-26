@@ -1,6 +1,6 @@
 # F1 Racing Extension
 
-The F1 Racing Extension is a Chrome extension that displays the schedule for the upcoming races, the 2023 race calendar, and the current standings.
+F1 Racing extension displays the race weekend structure on user's time zone for upcoming F1 events, the season schedule, team and driver standings, and the latest race information.
 
 ## Screenshot
 
@@ -8,7 +8,7 @@ The F1 Racing Extension is a Chrome extension that displays the schedule for the
 
 ## Usage
 
-After the extension is installed, an icon will appear in the top right corner of your browser. Clicking it will give you access to the upcoming races, the 2023 race calendar, and the current standings.
+After the extension is installed, an icon will appear in the top right corner of your browser. Clicking it will give you access to the upcoming race, the season schedule, team and driver standings, and the latest race information.
 
 ## Installation
 
@@ -20,7 +20,7 @@ To install the extension, follow these steps:
 - Open the `chrome://extensions` page in your Chrome browser.
 - Turn on the "Developer mode" switch in the top right corner of the page.
 - Click the "Load unpacked" button in the top left corner of the page.
-- Select the files in the downloaded `dist` folder and click "OK".
+- Select the `dist` folder and click "OK".
 
 ## Development
 
