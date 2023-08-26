@@ -1,6 +1,6 @@
 # F1 Racing Extension
 
-The F1 Racing Extension is a Chrome extension that displays the schedule for the upcoming races, the current race calendar, and the current standings.
+F1 Racing extension displays the race weekend structure on user's time zone for upcoming F1 events, the season schedule, team and driver standings, and the latest race information.
 
 ## Screenshot
 
