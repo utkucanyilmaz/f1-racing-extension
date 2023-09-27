@@ -40,7 +40,7 @@ function Calendar({ races }) {
         </NavigationItem>
       </div>
 
-      <div className="p-1 max-h-80 overflow-y-scroll">
+      <div className="p-1 h-80 overflow-y-scroll">
         {races &&
           racesData.map(race => (
             <CalendarItem
