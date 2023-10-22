@@ -8,7 +8,7 @@ import NavigationBar from "../NavigationBar";
 import LastRaceResults from "../last-race-components/LastRaceResults";
 import LoadingPlacholder from "./LoadingPlaceholder";
 
-import { formatDate, findNextRace } from "../../helpers";
+import { formatDate, findRace } from "../../helpers";
 
 function Race({
   races,
@@ -22,7 +22,7 @@ function Race({
   const [isLoading, setIsLoading] = useState(true);
 
   async function getNextRaceData() {
-    const raceInfo = findNextRace(races);
+    const raceInfo = findRace(races, "next");
 
     const firstRaceDay = formatDate(raceInfo.FirstPractice.date);
 
@@ -76,7 +76,7 @@ function Race({
             />
           )}
           {activeTab === "last-race" && (
-            <LastRaceResults lastRaceResults={lastRaceResults} />
+            <LastRaceResults lastRaceResults={lastRaceResults} races={races} />
           )}
         </div>
       )}

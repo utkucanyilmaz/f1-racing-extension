@@ -3,10 +3,10 @@ import CalendarItem from "./CalendarItem";
 
 import NavigationItem from "../NavigationItem";
 
-import { findNextRace, formatDate } from "../../helpers";
+import { findRace, formatDate } from "../../helpers";
 
 function Calendar({ races }) {
-  const nextRace = findNextRace(races);
+  const nextRace = findRace(races, "next");
   const [activeTab, setActiveTab] = useState("upcoming");
 
   const handleClick = tab => {

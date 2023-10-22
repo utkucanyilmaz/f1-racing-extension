@@ -54,7 +54,7 @@ function NavigationBar({ activeTab, setActiveTab }) {
           isActive={activeTab === "last-race"}
           onItemClick={() => handleItemClick("last-race")}
         >
-          Last Race
+          Last Race Results
         </NavigationItem>
       </SwiperSlide>
       <button className="prev navbar-button left-0">

@@ -64,3 +64,21 @@ export const fetchLastRaceResults = async () => {
     console.log(error);
   }
 };
+
+export const fetchSprintRaceResults = async raceRound => {
+  try {
+    const sprintResults = await fetch(
+      `${baseUrl}/current/${raceRound}/sprint.json`
+    );
+
+    const {
+      MRData: {
+        RaceTable: { Races },
+      },
+    } = await sprintResults.json();
+
+    return Races[0].SprintResults;
+  } catch (error) {
+    console.log(error);
+  }
+};

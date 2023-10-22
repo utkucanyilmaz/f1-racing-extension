@@ -13,7 +13,7 @@ function LastRaceTable({ results }) {
             team={item.Constructor.name}
             driverFullName={`${item.Driver.givenName} ${item.Driver.familyName}`}
             raceTime={item.Time ? item.Time.time : item.status}
-            fastestLap={item.FastestLap}
+            fastestLap={item.FastestLap && item.FastestLap}
           />
         ))}
     </div>

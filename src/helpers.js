@@ -6,12 +6,22 @@ export const formatDate = date => {
   return raceDay;
 };
 
-export const findNextRace = races => {
+export const findRace = (races, action) => {
   const now = new Date().getTime();
 
-  return races.find(
-    race => new Date(`${race.date}T${race.time}`).getTime() > now
-  );
+  switch (action) {
+    case "next":
+      return races.find(
+        race => new Date(`${race.date}T${race.time}`).getTime() > now
+      );
+
+    case "prev":
+      return races.findLast(
+        race => new Date(`${race.date}T${race.time}`).getTime() < now
+      );
+    default:
+      console.error("Unknown action: " + action);
+  }
 };
 
 export const formatSessionDateTime = (
