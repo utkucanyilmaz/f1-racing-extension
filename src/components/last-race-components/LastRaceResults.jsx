@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import LastRaceInfo from "./LastRaceInfo";
 import LastRaceTable from "./LastRaceTable";
 import NavigationItem from "../NavigationItem";
-import { findRace } from "../../helpers";
+
 import { fetchSprintRaceResults } from "../../api";
+import { findPrevRace } from "../../helpers";
 
 function LastRaceResults({ lastRaceResults, races }) {
   const [activeTab, setActiveTab] = useState("race");
   const [sprintResults, setSprintResults] = useState(null);
-  const lastRace = findRace(races, "prev");
+  const lastRace = findPrevRace(races, lastRaceResults.round);
 
   useEffect(() => {
     const getSprintResults = async round => {
@@ -17,7 +18,7 @@ function LastRaceResults({ lastRaceResults, races }) {
     };
 
     if (lastRace.Sprint) {
-      getSprintResults(lastRace.round);
+      getSprintResults(lastRaceResults.round);
     }
   }, []);
 
