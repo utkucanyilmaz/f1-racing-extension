@@ -7,7 +7,7 @@ function LastRaceTable({ results }) {
       {results &&
         results.map(item => (
           <LastRaceTableItem
-            key={+item.number}
+            key={+item.position}
             position={item.position}
             points={item.points}
             team={item.Constructor.name}
