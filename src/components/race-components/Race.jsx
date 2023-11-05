@@ -38,6 +38,8 @@ function Race({
             )
           : raceInfo.Circuit.Location.country === "UK"
           ? await fetch("https://restcountries.com/v3.1/name/gb?fields=flags")
+          : raceInfo.Circuit.Location.country === "United States"
+          ? await fetch("https://restcountries.com/v3.1/name/usa?fields=flags")
           : await fetch(
               `https://restcountries.com/v3.1/name/${raceInfo.Circuit.Location.country}?fields=flags`
             );
