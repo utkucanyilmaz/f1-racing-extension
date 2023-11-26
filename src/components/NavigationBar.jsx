@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./NavigationBar.css";
 
-function NavigationBar({ activeTab, setActiveTab }) {
+function NavigationBar({ activeTab, setActiveTab, nextRace }) {
   const handleItemClick = item => {
     setActiveTab(item);
   };
@@ -25,22 +25,26 @@ function NavigationBar({ activeTab, setActiveTab }) {
       className="mt-1 relative group"
       slidesPerView={2}
     >
-      <SwiperSlide>
-        <NavigationItem
-          isActive={activeTab === "race-weekend"}
-          onItemClick={() => handleItemClick("race-weekend")}
-        >
-          Race Weekend
-        </NavigationItem>
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavigationItem
-          isActive={activeTab === "calendar"}
-          onItemClick={() => handleItemClick("calendar")}
-        >
-          Calendar
-        </NavigationItem>
-      </SwiperSlide>
+      {nextRace !== "season-over" && (
+        <>
+          <SwiperSlide>
+            <NavigationItem
+              isActive={activeTab === "race-weekend"}
+              onItemClick={() => handleItemClick("race-weekend")}
+            >
+              Race Weekend
+            </NavigationItem>
+          </SwiperSlide>
+          <SwiperSlide>
+            <NavigationItem
+              isActive={activeTab === "calendar"}
+              onItemClick={() => handleItemClick("calendar")}
+            >
+              Calendar
+            </NavigationItem>
+          </SwiperSlide>
+        </>
+      )}
       <SwiperSlide>
         <NavigationItem
           isActive={activeTab === "standings"}
